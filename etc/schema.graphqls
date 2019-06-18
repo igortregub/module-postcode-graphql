@@ -1,0 +1,12 @@
+type Query {
+    postcode_test (
+        postcode_id: Int @doc(description: "Get postcode by id")
+    ): Postcode
+    @resolver(class: "IgorTregub\\PostcodeGraphQL\\Model\\Resolver\\Postcodes") @doc(description: "The postcode query searches for postcode that match the criteria specified in the postcode_id")
+}
+
+type Postcode @doc(description: "Poscode is an output object containing the `postcode_id`, `postcode`, and `country_id` attributes") {
+    postcode_id: Int @doc(description: "The ID assigned to the object associated with the specified postcode.")
+    postcode: String @doc(description: "Postcode value")
+    country_id: String @doc(description: "Country code")
+}
