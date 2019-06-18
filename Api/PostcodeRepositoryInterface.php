@@ -12,6 +12,8 @@ use Magento\Framework\Exception\NoSuchEntityException;
 
 /**
  * Interface PostcodeRepositoryInterface
+ *
+ * @api
  */
 interface PostcodeRepositoryInterface
 {
